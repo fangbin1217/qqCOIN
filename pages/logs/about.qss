@@ -1,0 +1,36 @@
+/* pages/share/about.wxss */
+
+/* pages/share/index.wxss */
+.myqrcode image{
+  width:150px;height:150px;
+  border-radius:10px;
+}
+
+.mytitle{
+  font-size: 20px;
+  margin-top:20px;
+  color:#888888;
+}
+
+.myteam{
+  font-size: 16px;
+  margin-top:20px;
+  color:#888888;
+}
+
+.myteam2{
+  font-size: 18px;
+  margin-top:20px;
+  font-weight:bold;
+  color:#1c2438;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}

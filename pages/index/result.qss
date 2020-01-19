@@ -1,0 +1,26 @@
+.iSpace{
+  height:15px;
+  background: #f8f8f9;
+}
+.iSpace2{
+  height:15px;
+}
+
+.bankImage{
+  width: 375px;height: 214px;
+  border-radius: 2px;
+}
+
+.bankImageP{
+  text-align:center;
+}
+
+.contentTitle{
+  font-size:20px;
+  color:#1c2438;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}

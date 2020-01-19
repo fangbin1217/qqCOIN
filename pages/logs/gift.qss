@@ -1,0 +1,56 @@
+.col-space1{
+  height:16px;
+}
+
+.col-space3{
+  height:5px;
+}
+
+.col-space{
+  height:16px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.tipsTitle{
+  font-size:20px;
+  color:#1c2438;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.tjTitle{
+  font-size:16px;
+  color:#1c2438;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.rewardTitle{
+  font-size:16px;
+  color:#1c2438;
+  font-weight:bold;
+  margin-left:10px;
+  height:25px;
+}
+
+.tjValue{
+  font-size:16px;
+  color:#ed3f14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.dataP{
+  margin-left:10px;
+}

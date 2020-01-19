@@ -1,0 +1,31 @@
+.col-space1{
+  height:16px;
+}
+
+.col-space{
+  background-color: #f8f8f9;
+  height:16px;
+}
+
+.col-space2{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.loginImage{
+    height:150px;
+    border-radius:5px;
+}
+
+.viewP{
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBtn{
+    border-radius: 10px;
+    font-size: 35rpx;
+    width:300px;heihgt:50px;
+}

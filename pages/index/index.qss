@@ -1,0 +1,126 @@
+.fxImage{
+  width: 50px;height:78px;
+}
+
+.iSpace{
+  height:5px;
+}
+.iSpace2{
+  height:15px;
+}
+
+.col-space3{
+  background-color: #f8f8f9;
+  height:15px;
+}
+.col-space4{
+  background-color: #f8f8f9;
+  height:1px;
+}
+
+.detailImage{
+  width: 50px;height:78px;
+  border-radius:5px;
+}
+.fxImage{
+  width: 50px;height:78px;
+}
+
+.iconP{
+  text-align: center;
+}
+
+.iconP2{
+  padding:0;
+  width: 50px;height:78px;
+}
+
+button::after{border:none}
+
+
+.btnImage{
+  width: 50px;height:78px;
+  border:none;
+}
+
+
+.picker{
+  font-size:16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height:50px;
+  color:#576B95;
+  text-align:center;
+}
+
+.date_title{
+  height:50px;
+  font-size:14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#8f8f8f;
+}
+
+
+.searchBtn{
+  height:50px;
+}
+
+.contentTitle{
+  font-size:20px;
+  color:#1c2438;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:30px;
+}
+
+.reserveTitle{
+  margin-left:10px;
+  font-size:18px;
+  color:#1c2438;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  height:30px;
+}
+
+.reserveContent{
+  margin-left:30px;
+  font-size:14px;
+  color:#8f8f8f;
+  display: flex;
+  align-items: center;
+  height:30px;
+}
+
+.viewP {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reserveContent2{
+  margin-left:30px;
+  font-size:14px;
+  color:#8f8f8f;
+  display: flex;
+  align-items: center;
+  height:150px;
+}
+
+.bank{
+  margin-left:30px;
+  font-size:16px;
+  color:#576B95;
+  display: flex;
+  align-items: center;
+  height:30px;
+}
+
+.sxImage{
+  width:128px;height:128px;
+}
