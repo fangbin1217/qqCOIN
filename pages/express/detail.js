@@ -21,27 +21,63 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var winner_id = decodeURIComponent(options.winner_id);
     var that = this;
     qq.getSystemInfo({
       success: function (res) {
         var windowWidth = res.windowWidth;
         that.setData({
-          viewWidth: windowWidth,
-          lotteryGiftImage: app.globalData.imgHost + 'support/reward0202.png'
+          viewWidth: windowWidth
         })
       },
     })
-    this.initIndex();
+    this.initIndex(winner_id);
   },
 
-  initIndex: function() {
-    this.setData({
-      tipsTitle: '2019年第1期抽奖',
-      giftValue: '2019年鼠年生肖纪念币1枚',
-      expressUser: '张三',
-      expressMobile: '18888888888',
-      expressAddress: '浙江省杭州市拱墅区文岚街158号X楼N幢1单元2902室',
-      remark: '审核不通过，快递信息错误，请到（关于）页面联系管理员处理'
+  initIndex: function(winner_id) {
+    qq.showLoading();
+    var access_token = qq.getStorageSync('access_token') || '';
+    qq.request({
+      url: app.globalData.serverHost+'coin/detail', //接口地址
+      method: 'post',
+      data: { access_token: access_token, is_coin: 1, winner_id: winner_id },
+      success: res => {
+        qq.hideLoading();
+        console.log(res.data)
+        var ret = res.data;
+        if (ret.code == 0) {
+          this.setData({
+            winner_id: winner_id,
+            tipsTitle: ret.data.tipsTitle,
+            giftValue: ret.data.giftValue,
+            expressUser: ret.data.expressUser,
+            expressMobile: ret.data.expressMobile,
+            expressAddress: ret.data.expressAddress,
+            remark: ret.data.remark,
+            lotteryGiftImage: ret.data.lotteryGiftImage
+          });
+        } else if (ret.code == 101) {  //如果access_token过期，则重新登录
+          this.login(1);
+        } else {
+          qq.showToast({
+            title: ret.msg,
+            icon: 'none',
+            image: app.globalData.image_warning,
+            duration: 1500,
+            mask: true
+          });
+        }
+      },
+      fail: () => {
+        qq.hideLoading();
+        qq.showToast({
+          title: ret.msg,
+          icon: 'none',
+          image: app.globalData.image_warning,
+          duration: 1500,
+          mask: true
+        });
+      }
     });
   },
 

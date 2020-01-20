@@ -51,17 +51,17 @@
   <i-row class="iRow"><i-col span="24" i-class="col-space3"></i-col></i-row>
 <view class="dataP">
   <i-row class="iRow">
-      <i-col span="6" i-class="listTitle">日期</i-col>
-      <i-col span="6" i-class="listTitle">奖品</i-col>
-      <i-col span="6" i-class="listTitle">状态</i-col>
-      <i-col span="6" i-class="listTitle">操作</i-col>
+      <i-col span="8" i-class="listTitle">日期</i-col>
+      <i-col span="8" i-class="listTitle">奖品</i-col>
+      <i-col span="4" i-class="listTitle">状态</i-col>
+      <i-col span="4" i-class="listTitle">操作</i-col>
     </i-row>
     <view wx:if="{{records}}" wx:for="{{records}}" wx:key="id" wx:for-index="index">
       <i-row class="iRow">
-        <i-col span="6" i-class="listValue">{{item.create_time}}</i-col>
-        <i-col span="6" i-class="listValue">{{item.reward}}</i-col>
-        <i-col span="6" i-class="listValue"><view style="color:{{item.color}};">{{item.status}}</view></i-col>
-        <i-col span="6" i-class="listValue"><view qq:if="{{item.status == 0}}"><i-button bind:click="handleClick" type="primary" size="small" data-id="{{item.id}}">兑奖</i-button>
+        <i-col span="8" i-class="listValue">{{item.create_time}}</i-col>
+        <i-col span="8" i-class="listValue"><view style="font-size:12px;">{{item.gift}}</view></i-col>
+        <i-col span="4" i-class="listValue"><view style="color:{{item.color}};">{{item.status_name}}</view></i-col>
+        <i-col span="4" i-class="listValue"><view qq:if="{{item.status == 0}}"><button bindtap="doDui" data-id="{{item.id}}" class="myDui">兑奖</button>
     </view></i-col>
     </i-row>
     <i-row class="iRow"><i-col span="24" i-class="col-space2"></i-col></i-row>

@@ -12,6 +12,7 @@ Page({
     color: '#1c2438',
     lottery_codes: [],
     my_codes: [],
+    expressId: 0,
     records: [],
     page: 1,
     total: 0
@@ -48,6 +49,7 @@ Page({
             lottery_codes: ret.data.lottery_codes,
             my_codes: ret.data.my_codes,
             reward_codes: ret.data.reward_codes,
+            expressId: ret.data.expressId,
             records: ret.data.list,
             page: ret.data.page,
             total: ret.data.total_page
@@ -75,6 +77,22 @@ Page({
         });
       }
     });
+  },
+
+  doDui: function(e) {
+    var winner_id = e.currentTarget.dataset.id;
+    var expressId = parseInt(this.data.expressId);
+    if (this.data.expressId > 0) {
+      //有快递信息，则跳转详情页
+      qq.navigateTo({
+        url: '/pages/express/detail?winner_id='+winner_id
+      });
+    } else {
+      //没有快递信息，则跳转到快递页
+      qq.navigateTo({
+        url: '/pages/express/edit?winner_id='+winner_id
+      });
+    }
   },
 
   pageChange: function({ detail }) {

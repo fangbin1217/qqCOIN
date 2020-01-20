@@ -163,6 +163,7 @@
 .userImage{
   width:30px;height:30px;
   border-radius:10px;
+  margin-right:10px;
 }
 
 .rightImage2{
